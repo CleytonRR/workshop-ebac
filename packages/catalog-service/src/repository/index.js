@@ -7,5 +7,11 @@ module.exports = {
 
   async list() {
     return await Movie.find()
+  },
+
+  async show(id) {
+    return await Movie.exists({
+      _id: id
+    });
   }
 }

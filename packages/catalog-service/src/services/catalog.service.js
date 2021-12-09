@@ -23,6 +23,15 @@ module.exports = {
 
        return allMovies
      }
+   },
+
+   findById: {
+     async handler(ctx) {
+       if(ctx.params && ctx.params.id) {
+         return await repository.show(ctx.params.id)
+        }
+        throw "Id é obrigatório"
+     }
    }
   }
 }

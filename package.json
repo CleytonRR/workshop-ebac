@@ -1,6 +1,5 @@
 {
   "name": "challenge-microservice-workshop",
-  "version": "1.0.0",
   "description": "Microservice made by workshop ebac ",
   "main": "index.js",
   "author": "Cleyton Furtado",

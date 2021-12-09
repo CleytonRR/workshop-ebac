@@ -5,9 +5,11 @@ module.exports = {
     await User.create({...data})
   },
 
-  async show(id) {
-    return await User.exists({
-      _id: id
-    });
+  async show(data) {
+    return await User.exists(data);
+  },
+
+  async findById(id) {
+    return await User.findById(id)
   }
 }

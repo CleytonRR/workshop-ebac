@@ -1,11 +1,8 @@
 const repository = require("../repository")
 
 module.exports = {
-  name: "rate-movie-service",
+  name: "user-service",
   version: 1,
-  dependencies: [
-    "v1.catalog-service"
-  ],
   actions: {
    create: {
     async handler(ctx) {
@@ -43,7 +40,7 @@ module.exports = {
         throw "Id é obrigatório"        
       }
 
-      return await repository.show({_id: id})
+      return await repository.findById(ctx.params.id)
     }
    },
   }
